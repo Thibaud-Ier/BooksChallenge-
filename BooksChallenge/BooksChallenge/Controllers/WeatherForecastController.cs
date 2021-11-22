@@ -10,7 +10,7 @@ namespace BooksChallenge.Controllers
 	[Route("[controller]")]
 	public class WeatherForecastController : ControllerBase
 	{
-		private ILoggerManager _logger;
+		private readonly ILoggerManager _logger;
 
 		private static readonly string[] Summaries = new[]
 		{
