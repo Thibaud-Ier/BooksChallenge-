@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Contracts</name>
+    </assembly>
+    <members>
+        <member name="T:Contracts.ILoggerManager">
+            <summary>
+            The logger interface.
+            </summary>
+        </member>
+        <member name="M:Contracts.ILoggerManager.LogDebug(System.String)">
+            <summary>
+            Log for debug.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Contracts.ILoggerManager.LogInfo(System.String)">
+            <summary>
+            Log for informations.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Contracts.ILoggerManager.LogWarn(System.String)">
+            <summary>
+            Log for warnings.
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Contracts.ILoggerManager.LogError(System.String)">
+            <summary>
+            Log for errors.
+            </summary>
+            <param name="message"></param>
+        </member>
+    </members>
+</doc>
