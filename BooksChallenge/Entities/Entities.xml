@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Entities</name>
+    </assembly>
+    <members>
+        <member name="T:Entities.Configuration.AuthorConfiguration">
+            <summary>
+            Configuration of the Author table.
+            </summary>
+        </member>
+        <member name="M:Entities.Configuration.AuthorConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Entities.Models.Author})">
+            <summary>
+            Creation of rows in the table.
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Entities.Configuration.BookConfiguration">
+            <summary>
+            Configuration of the Book table.
+            </summary>
+        </member>
+        <member name="M:Entities.Configuration.BookConfiguration.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Entities.Models.Book})">
+            <summary>
+            Creation of rows in the table.
+            </summary>
+            <param name="builder"></param>
+        </member>
+        <member name="T:Entities.Models.Author">
+            <summary>
+            Represents an author.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Author.Id">
+            <summary>
+            Id of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Author.FirstName">
+            <summary>
+            First Name of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Author.LastName">
+            <summary>
+            Last Name of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Author.Books">
+            <summary>
+            Books of the author.
+            </summary>
+        </member>
+        <member name="T:Entities.Models.Book">
+            <summary>
+            Represents a book.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Book.Id">
+            <summary>
+            Id of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Book.Name">
+            <summary>
+            Name of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Book.Isbn">
+            <summary>
+            Isbn code of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Book.AuthorId">
+            <summary>
+            Author Id of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.Models.Book.Author">
+            <summary>
+            Author of the book
+            </summary>
+        </member>
+        <member name="T:Entities.RepositoryContext">
+            <summary>
+            Represents the context.
+            </summary>
+        </member>
+        <member name="M:Entities.RepositoryContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions)">
+            <summary>
+            Build the context.
+            </summary>
+            <param name="options"></param>
+        </member>
+        <member name="M:Entities.RepositoryContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Intercept the creation of the model.
+            </summary>
+            <param name="modelBuilder"></param>
+        </member>
+        <member name="P:Entities.RepositoryContext.Authors">
+            <summary>
+            DbSet of the Authors.
+            </summary>
+        </member>
+        <member name="P:Entities.RepositoryContext.Books">
+            <summary>
+            DbSet of the Books.
+            </summary>
+        </member>
+    </members>
+</doc>
