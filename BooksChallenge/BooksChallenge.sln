@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksChallenge", "BooksChallenge\BooksChallenge.csproj", "{794794B7-88FA-43D9-A675-2865E016FCA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksChallenge", "BooksChallenge\BooksChallenge.csproj", "{794794B7-88FA-43D9-A675-2865E016FCA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{D425DA65-E31D-4733-8682-9844AAB7EBAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{D425DA65-E31D-4733-8682-9844AAB7EBAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{6AA211C0-E7D2-46CA-A0DC-4DBD5DFAF8F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{6AA211C0-E7D2-46CA-A0DC-4DBD5DFAF8F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{C42A93F8-E5C1-4C6D-90A7-235F0CE963DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entities.csproj", "{C42A93F8-E5C1-4C6D-90A7-235F0CE963DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{48E14644-2269-40CF-8845-B6742D0EF14F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C42A93F8-E5C1-4C6D-90A7-235F0CE963DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C42A93F8-E5C1-4C6D-90A7-235F0CE963DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C42A93F8-E5C1-4C6D-90A7-235F0CE963DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E14644-2269-40CF-8845-B6742D0EF14F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E14644-2269-40CF-8845-B6742D0EF14F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E14644-2269-40CF-8845-B6742D0EF14F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E14644-2269-40CF-8845-B6742D0EF14F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

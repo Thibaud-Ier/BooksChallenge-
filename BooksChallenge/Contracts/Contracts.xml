@@ -33,5 +33,74 @@
             </summary>
             <param name="message"></param>
         </member>
+        <member name="T:Contracts.Repositories.IAuthorRepository">
+            <summary>
+            Interface for AuthorRepository.
+            </summary>
+        </member>
+        <member name="T:Contracts.Repositories.IBookRepository">
+            <summary>
+            Interface for BookRepository.
+            </summary>
+        </member>
+        <member name="T:Contracts.Repositories.IRepositoryBase`1">
+            <summary>
+            Represents the base repository contract.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Contracts.Repositories.IRepositoryBase`1.FindAll(System.Boolean)">
+            <summary>
+            Find all elements.
+            </summary>
+            <param name="trackChanges"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Contracts.Repositories.IRepositoryBase`1.FindByCondition(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Boolean)">
+            <summary>
+            Find all elements which matches the condition.
+            </summary>
+            <param name="expression"></param>
+            <param name="trackChanges"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Contracts.Repositories.IRepositoryBase`1.Create(`0)">
+            <summary>
+            Create element.
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Contracts.Repositories.IRepositoryBase`1.Update(`0)">
+            <summary>
+            Update element.
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Contracts.Repositories.IRepositoryBase`1.Delete(`0)">
+            <summary>
+            Delete element.
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="T:Contracts.Repositories.IRepositoryManager">
+            <summary>
+            Interface for repository manager.
+            </summary>
+        </member>
+        <member name="P:Contracts.Repositories.IRepositoryManager.Author">
+            <summary>
+            The Author repository.
+            </summary>
+        </member>
+        <member name="P:Contracts.Repositories.IRepositoryManager.Book">
+            <summary>
+            The book repository.
+            </summary>
+        </member>
+        <member name="M:Contracts.Repositories.IRepositoryManager.Save">
+            <summary>
+            Save the changes in repositories.
+            </summary>
+        </member>
     </members>
 </doc>
