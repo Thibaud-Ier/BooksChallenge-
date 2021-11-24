@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BooksChallenge</name>
+    </assembly>
+    <members>
+        <member name="T:BooksChallenge.Controllers.AuthorsController">
+            <summary>
+            The Authors Controller.
+            </summary>
+        </member>
+        <member name="M:BooksChallenge.Controllers.AuthorsController.#ctor(Contracts.Repositories.IRepositoryManager)">
+            <summary>
+            Constructor of AuthorsController.
+            </summary>
+            <param name="repository"></param>
+        </member>
+        <member name="M:BooksChallenge.Controllers.AuthorsController.GetAuthors">
+            <summary>
+            Get the list of authors.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:BooksChallenge.Program">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:BooksChallenge.Program.Main(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+        </member>
+        <member name="M:BooksChallenge.Program.CreateHostBuilder(System.String[])">
+             <summary>
+            
+             </summary>
+             <param name="args"></param>
+             <returns></returns>
+        </member>
+        <member name="T:BooksChallenge.Startup">
+            <summary>
+            The startup class.
+            </summary>
+        </member>
+        <member name="M:BooksChallenge.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+             <summary>
+            
+             </summary>
+             <param name="configuration"></param>
+        </member>
+        <member name="P:BooksChallenge.Startup.Configuration">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:BooksChallenge.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            ConfigureService.
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:BooksChallenge.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

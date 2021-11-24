@@ -38,6 +38,13 @@
             Interface for AuthorRepository.
             </summary>
         </member>
+        <member name="M:Contracts.Repositories.IAuthorRepository.GetAllAuthors(System.Boolean)">
+            <summary>
+            Get all authors.
+            </summary>
+            <param name="trackChanges"></param>
+            <returns></returns>
+        </member>
         <member name="T:Contracts.Repositories.IBookRepository">
             <summary>
             Interface for BookRepository.

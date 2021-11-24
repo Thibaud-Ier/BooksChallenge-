@@ -10,17 +10,31 @@ using System.IO;
 
 namespace BooksChallenge
 {
+	/// <summary>
+	/// The startup class.
+	/// </summary>
 	public class Startup
 	{
+		/// <summary>
+		///
+		/// </summary>
+		/// <param name="configuration"></param>
 		public Startup(IConfiguration configuration)
 		{
 			LogManager.LoadConfiguration(string.Concat(Directory.GetCurrentDirectory(), "/nlog.config"));
 			Configuration = configuration;
 		}
 
+		/// <summary>
+		///
+		/// </summary>
 		public IConfiguration Configuration { get; }
 
-		// This method gets called by the runtime. Use this method to add services to the container.
+		/// <summary>
+		/// ConfigureService.
+		/// This method gets called by the runtime. Use this method to add services to the container.
+		/// </summary>
+		/// <param name="services"></param>
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.ConfigureLoggerService();
@@ -34,7 +48,11 @@ namespace BooksChallenge
 			});
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		/// <summary>
+		/// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		/// </summary>
+		/// <param name="app"></param>
+		/// <param name="env"></param>
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
