@@ -26,6 +26,56 @@
             </summary>
             <param name="builder"></param>
         </member>
+        <member name="T:Entities.DTO.AuthorDTO">
+            <summary>
+            Represents an author DTO.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.AuthorDTO.Id">
+            <summary>
+            Id of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.AuthorDTO.FirstName">
+            <summary>
+            First Name of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.AuthorDTO.LastName">
+            <summary>
+            Last Name of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.AuthorDTO.Books">
+            <summary>
+            Books of the author.
+            </summary>
+        </member>
+        <member name="T:Entities.DTO.BookDTO">
+            <summary>
+            Represents a book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.BookDTO.Id">
+            <summary>
+            Id of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.BookDTO.Name">
+            <summary>
+            Name of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.BookDTO.Isbn">
+            <summary>
+            Isbn code of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.BookDTO.AuthorId">
+            <summary>
+            Author Id of the book.
+            </summary>
+        </member>
         <member name="T:Entities.Models.Author">
             <summary>
             Represents an author.

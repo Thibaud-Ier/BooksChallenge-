@@ -1,6 +1,6 @@
 using ApiTests.Fixtures;
 using BooksChallenge.Controllers;
-using Entities.Models;
+using Entities.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using System;
@@ -11,16 +11,16 @@ using Xunit;
 namespace ApiTests
 {
 	//[CollectionDefinition("InMemoryDatabase")]
-	public class AuthorsControllerTests : IClassFixture<DatabaseInMemoryFixture>
+	public class AuthorsControllerTests : IClassFixture<ControllerWithDatabaseInMemoryFixture>
 	{
-		private readonly DatabaseInMemoryFixture _fixture;
+		private readonly ControllerWithDatabaseInMemoryFixture _fixture;
 		private readonly AuthorsController _controller;
 
-		public AuthorsControllerTests(DatabaseInMemoryFixture fixture)
+		public AuthorsControllerTests(ControllerWithDatabaseInMemoryFixture fixture)
 		{
 			var repositoryManager = new RepositoryManager(fixture.Context);
 			_fixture = fixture;
-			_controller = new AuthorsController(repositoryManager);
+			_controller = new AuthorsController(repositoryManager, fixture.Mapper);
 		}
 
 		~AuthorsControllerTests()
@@ -36,7 +36,7 @@ namespace ApiTests
 			var okResult = result as OkObjectResult;
 			Assert.NotNull(okResult);
 			Assert.Equal(200, okResult.StatusCode);
-			var listAuthor = okResult.Value as IEnumerable<Author>;
+			var listAuthor = okResult.Value as IEnumerable<AuthorDTO>;
 			Assert.NotNull(listAuthor);
 			Assert.Equal(2, listAuthor.Count());
 			Assert.Equal(new Guid("3f9a0026-e78e-4307-a4df-c28470b7867d"), listAuthor.First().Id);

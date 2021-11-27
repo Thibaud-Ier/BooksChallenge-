@@ -1,5 +1,8 @@
-﻿using Contracts.Repositories;
+﻿using AutoMapper;
+using Contracts.Repositories;
+using Entities.DTO;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace BooksChallenge.Controllers
 {
@@ -11,14 +14,17 @@ namespace BooksChallenge.Controllers
 	public class AuthorsController : Controller
 	{
 		private readonly IRepositoryManager _repository;
+		private readonly IMapper _mapper;
 
 		/// <summary>
 		/// Constructor of AuthorsController.
 		/// </summary>
 		/// <param name="repository"></param>
-		public AuthorsController(IRepositoryManager repository)
+		/// <param name="mapper"></param>
+		public AuthorsController(IRepositoryManager repository, IMapper mapper)
 		{
 			_repository = repository;
+			_mapper = mapper;
 		}
 
 		/// <summary>
@@ -29,7 +35,8 @@ namespace BooksChallenge.Controllers
 		public IActionResult GetAuthors()
 		{
 			var authors = _repository.Author.GetAllAuthors(trackChanges: false);
-			return Ok(authors);
+			var authorsDTO = _mapper.Map<IEnumerable<AuthorDTO>>(authors);
+			return Ok(authorsDTO);
 		}
 	}
 }

@@ -1,17 +1,24 @@
-﻿using Entities;
+﻿using AutoMapper;
+using BooksChallenge;
+using Entities;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using System;
 
 namespace ApiTests.Fixtures
 {
-	public sealed class DatabaseInMemoryFixture : IDisposable
+	public sealed class ControllerWithDatabaseInMemoryFixture : IDisposable
 	{
 		private const string InMemoryConnectionString = "DataSource=:memory:";
 		private readonly SqliteConnection _connection;
 
-		public DatabaseInMemoryFixture()
+		public ControllerWithDatabaseInMemoryFixture()
 		{
+			var myProfile = new MappingProfile();
+			var configuration = new MapperConfiguration(cfg => cfg.AddProfile(myProfile));
+
+			Mapper = new Mapper(configuration);
+
 			_connection = new SqliteConnection(InMemoryConnectionString);
 			_connection.Open();
 
@@ -24,6 +31,8 @@ namespace ApiTests.Fixtures
 		}
 
 		public RepositoryContext Context { get; private set; }
+
+		public IMapper Mapper { get; private set; }
 
 		public void Dispose()
 		{
