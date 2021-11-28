@@ -22,6 +22,38 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:BooksChallenge.Controllers.AuthorsController.GetAuthor(System.Guid)">
+            <summary>
+            Get author by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="T:BooksChallenge.Controllers.BooksController">
+            <summary>
+            The Books Controller.
+            </summary>
+        </member>
+        <member name="M:BooksChallenge.Controllers.BooksController.#ctor(Contracts.Repositories.IRepositoryManager,AutoMapper.IMapper)">
+            <summary>
+            Constructor of AuthorsController.
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:BooksChallenge.Controllers.BooksController.GetBooks">
+            <summary>
+            Get the list of authors.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BooksChallenge.Controllers.BooksController.GetBook(System.Guid)">
+            <summary>
+            Get book by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="T:BooksChallenge.MappingProfile">
             <summary>
             Mapping Profile

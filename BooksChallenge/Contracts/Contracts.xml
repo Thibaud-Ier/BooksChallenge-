@@ -45,10 +45,33 @@
             <param name="trackChanges"></param>
             <returns></returns>
         </member>
+        <member name="M:Contracts.Repositories.IAuthorRepository.GetAuthorAsync(System.Guid,System.Boolean)">
+            <summary>
+            Get an author with its id.
+            </summary>
+            <param name="authorId"></param>
+            <param name="trackChanges"></param>
+            <returns></returns>
+        </member>
         <member name="T:Contracts.Repositories.IBookRepository">
             <summary>
             Interface for BookRepository.
             </summary>
+        </member>
+        <member name="M:Contracts.Repositories.IBookRepository.GetAllBooksAsync(System.Boolean)">
+            <summary>
+            Get all books.
+            </summary>
+            <param name="trackChanges"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Contracts.Repositories.IBookRepository.GetBookAsync(System.Guid,System.Boolean)">
+            <summary>
+            Get a book with its id.
+            </summary>
+            <param name="bookId"></param>
+            <param name="trackChanges"></param>
+            <returns></returns>
         </member>
         <member name="T:Contracts.Repositories.IRepositoryBase`1">
             <summary>

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 namespace BooksChallenge.Controllers
 {
 	/// <summary>
-	/// The Authors Controller.
+	/// The Books Controller.
 	/// </summary>
 	[Route("api/[controller]")]
 	[ApiController]
-	public class AuthorsController : Controller
+	public class BooksController : Controller
 	{
 		private readonly IRepositoryManager _repository;
 		private readonly IMapper _mapper;
@@ -23,7 +23,7 @@ namespace BooksChallenge.Controllers
 		/// </summary>
 		/// <param name="repository"></param>
 		/// <param name="mapper"></param>
-		public AuthorsController(IRepositoryManager repository, IMapper mapper)
+		public BooksController(IRepositoryManager repository, IMapper mapper)
 		{
 			_repository = repository;
 			_mapper = mapper;
@@ -34,29 +34,29 @@ namespace BooksChallenge.Controllers
 		/// </summary>
 		/// <returns></returns>
 		[HttpGet]
-		public async Task<IActionResult> GetAuthors()
+		public async Task<IActionResult> GetBooks()
 		{
-			var authors = await _repository.Author.GetAllAuthorsAsync(trackChanges: false);
-			var authorsDTO = _mapper.Map<IEnumerable<AuthorDTO>>(authors);
+			var books = await _repository.Book.GetAllBooksAsync(trackChanges: false);
+			var booksDTO = _mapper.Map<IEnumerable<BookDTO>>(books);
 
-			return Ok(authorsDTO);
+			return Ok(booksDTO);
 		}
 
 		/// <summary>
-		/// Get author by Id.
+		/// Get book by Id.
 		/// </summary>
 		/// <param name="id"></param>
 		/// <returns></returns>
 		[HttpGet("{id}")]
-		public async Task<IActionResult> GetAuthor(Guid id)
+		public async Task<IActionResult> GetBook(Guid id)
 		{
-			var author = await _repository.Author.GetAuthorAsync(id, trackChanges: false);
-			if (author is null)
+			var book = await _repository.Book.GetBookAsync(id, trackChanges: false);
+			if (book is null)
 				return NotFound();
 			else
 			{
-				var authorDto = _mapper.Map<AuthorDTO>(author);
-				return Ok(authorDto);
+				var bookDto = _mapper.Map<BookDTO>(book);
+				return Ok(bookDto);
 			}
 		}
 	}
