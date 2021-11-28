@@ -13,13 +13,11 @@ namespace ApiTests
 {
 	public class AuthorsControllerTests : IClassFixture<ControllerWithDatabaseInMemoryFixture>
 	{
-		private readonly ControllerWithDatabaseInMemoryFixture _fixture;
 		private readonly AuthorsController _controller;
 
 		public AuthorsControllerTests(ControllerWithDatabaseInMemoryFixture fixture)
 		{
 			var repositoryManager = new RepositoryManager(fixture.Context);
-			_fixture = fixture;
 			_controller = new AuthorsController(repositoryManager, fixture.Mapper);
 		}
 

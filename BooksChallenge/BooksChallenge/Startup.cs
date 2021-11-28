@@ -1,4 +1,5 @@
 using BooksChallenge.Extensions;
+using Contracts;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -54,7 +55,8 @@ namespace BooksChallenge
 		/// </summary>
 		/// <param name="app"></param>
 		/// <param name="env"></param>
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		/// <param name="logger"></param>
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerManager logger)
 		{
 			if (env.IsDevelopment())
 			{
@@ -63,6 +65,7 @@ namespace BooksChallenge
 				app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BooksChallenge v1"));
 			}
 
+			app.ConfigureExceptionHandler(logger);
 			app.UseHttpsRedirection();
 
 			app.UseRouting();

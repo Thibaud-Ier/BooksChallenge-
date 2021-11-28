@@ -76,6 +76,24 @@
             Author Id of the book.
             </summary>
         </member>
+        <member name="T:Entities.ErrorModel.ErrorDetails">
+            <summary>
+            Represents an error.
+            </summary>
+        </member>
+        <member name="P:Entities.ErrorModel.ErrorDetails.StatusCode">
+            <summary>
+            The status of the error.
+            </summary>
+        </member>
+        <member name="P:Entities.ErrorModel.ErrorDetails.Message">
+            <summary>
+            The message of the error.
+            </summary>
+        </member>
+        <member name="M:Entities.ErrorModel.ErrorDetails.ToString">
+            <inheritdoc />
+        </member>
         <member name="T:Entities.Models.Author">
             <summary>
             Represents an author.

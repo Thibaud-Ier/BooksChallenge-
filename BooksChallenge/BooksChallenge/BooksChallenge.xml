@@ -54,6 +54,18 @@
             <param name="id"></param>
             <returns></returns>
         </member>
+        <member name="T:BooksChallenge.Extensions.ExceptionMiddlewareExtensions">
+            <summary>
+            Middleware for the global exceptions.
+            </summary>
+        </member>
+        <member name="M:BooksChallenge.Extensions.ExceptionMiddlewareExtensions.ConfigureExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,Contracts.ILoggerManager)">
+            <summary>
+            The configuration method.
+            </summary>
+            <param name="app"></param>
+            <param name="logger"></param>
+        </member>
         <member name="T:BooksChallenge.MappingProfile">
             <summary>
             Mapping Profile
@@ -105,12 +117,13 @@
             </summary>
             <param name="services"></param>
         </member>
-        <member name="M:BooksChallenge.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+        <member name="M:BooksChallenge.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment,Contracts.ILoggerManager)">
             <summary>
             This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
             </summary>
             <param name="app"></param>
             <param name="env"></param>
+            <param name="logger"></param>
         </member>
     </members>
 </doc>
