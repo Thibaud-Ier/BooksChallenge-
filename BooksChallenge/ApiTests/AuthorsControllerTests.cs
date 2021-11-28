@@ -63,6 +63,7 @@ namespace ApiTests
 			Assert.Equal(new Guid(id), author.Id);
 			Assert.Equal(firstName, author.FirstName);
 			Assert.Equal(lastName, author.LastName);
+			Assert.Equal(2, author.Books.Count);
 		}
 
 		[Fact]

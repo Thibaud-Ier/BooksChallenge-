@@ -19,6 +19,6 @@ namespace Repository
 			await FindAll(trackChanges).OrderBy(a => a.LastName).ThenBy(a => a.FirstName).ToListAsync();
 
 		public async Task<Author> GetAuthorAsync(Guid authorId, bool trackChanges) =>
-			await FindByCondition(c => c.Id.Equals(authorId), trackChanges).SingleOrDefaultAsync();
+			await FindByCondition(c => c.Id.Equals(authorId), trackChanges).Include("Books").SingleOrDefaultAsync();
 	}
 }
