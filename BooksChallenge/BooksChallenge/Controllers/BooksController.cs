@@ -47,7 +47,7 @@ namespace BooksChallenge.Controllers
 		/// </summary>
 		/// <param name="id"></param>
 		/// <returns></returns>
-		[HttpGet("{id}")]
+		[HttpGet("{id}", Name = "BookById")]
 		public async Task<IActionResult> GetBook(Guid id)
 		{
 			var book = await _repository.Book.GetBookAsync(id, trackChanges: false);
