@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
-using Entities.DTO;
+using Entities.DTO.Authors;
+using Entities.DTO.Books;
 using Entities.Models;
 
 namespace BooksChallenge

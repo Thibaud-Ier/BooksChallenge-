@@ -29,7 +29,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:BooksChallenge.Controllers.AuthorsController.CreateAuthor(Entities.DTO.AuthorForCreationDto)">
+        <member name="M:BooksChallenge.Controllers.AuthorsController.CreateAuthor(Entities.DTO.Authors.AuthorForCreationDto)">
             <summary>
             Create an author.
             </summary>
@@ -61,7 +61,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:BooksChallenge.Controllers.BooksController.CreateBook(Entities.DTO.BookForCreationDto)">
+        <member name="M:BooksChallenge.Controllers.BooksController.CreateBook(Entities.DTO.Books.BookForCreationDto)">
             <summary>
             Create a book.
             </summary>

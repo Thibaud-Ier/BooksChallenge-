@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Entities.DTO
+namespace Entities.DTO.Books
 {
 	/// <summary>
 	/// Represents a book.

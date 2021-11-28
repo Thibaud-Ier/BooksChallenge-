@@ -1,7 +1,8 @@
-﻿using System;
+﻿using Entities.DTO.Books;
+using System;
 using System.Collections.Generic;
 
-namespace Entities.DTO
+namespace Entities.DTO.Authors
 {
 	/// <summary>
 	/// Represents an author DTO.

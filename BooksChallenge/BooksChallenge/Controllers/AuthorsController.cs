@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Contracts.Repositories;
-using Entities.DTO;
+using Entities.DTO.Authors;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;

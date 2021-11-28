@@ -1,4 +1,4 @@
-﻿namespace Entities.DTO
+﻿namespace Entities.DTO.Authors
 {
 	/// <summary>
 	/// Represents the DTO for the creation of an author.

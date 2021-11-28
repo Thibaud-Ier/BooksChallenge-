@@ -1,6 +1,6 @@
 ﻿using ApiTests.Fixtures;
 using BooksChallenge.Controllers;
-using Entities.DTO;
+using Entities.DTO.Books;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
 using System;
