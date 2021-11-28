@@ -29,7 +29,7 @@ namespace ApiTests
 			var okResult = result as OkObjectResult;
 			Assert.NotNull(okResult);
 			Assert.Equal(200, okResult.StatusCode);
-			var listBooks = okResult.Value as IEnumerable<BookDTO>;
+			var listBooks = okResult.Value as IEnumerable<BookDto>;
 			Assert.NotNull(listBooks);
 			Assert.Equal(4, listBooks.Count());
 
@@ -68,7 +68,7 @@ namespace ApiTests
 			var okResult = result as OkObjectResult;
 			Assert.NotNull(okResult);
 			Assert.Equal(200, okResult.StatusCode);
-			var book = okResult.Value as BookDTO;
+			var book = okResult.Value as BookDto;
 
 			Assert.NotNull(book);
 			Assert.Equal(new Guid(id), book.Id);

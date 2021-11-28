@@ -24,5 +24,11 @@ namespace Contracts.Repositories
 		/// <param name="trackChanges"></param>
 		/// <returns></returns>
 		Task<Book> GetBookAsync(Guid bookId, bool trackChanges);
+
+		/// <summary>
+		/// Create a book.
+		/// </summary>
+		/// <param name="book"></param>
+		void CreateBook(Book book);
 	}
 }

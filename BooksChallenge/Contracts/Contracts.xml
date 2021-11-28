@@ -53,6 +53,12 @@
             <param name="trackChanges"></param>
             <returns></returns>
         </member>
+        <member name="M:Contracts.Repositories.IAuthorRepository.CreateAuthor(Entities.Models.Author)">
+            <summary>
+            Create an author.
+            </summary>
+            <param name="author"></param>
+        </member>
         <member name="T:Contracts.Repositories.IBookRepository">
             <summary>
             Interface for BookRepository.
@@ -72,6 +78,12 @@
             <param name="bookId"></param>
             <param name="trackChanges"></param>
             <returns></returns>
+        </member>
+        <member name="M:Contracts.Repositories.IBookRepository.CreateBook(Entities.Models.Book)">
+            <summary>
+            Create a book.
+            </summary>
+            <param name="book"></param>
         </member>
         <member name="T:Contracts.Repositories.IRepositoryBase`1">
             <summary>
@@ -127,7 +139,7 @@
             The book repository.
             </summary>
         </member>
-        <member name="M:Contracts.Repositories.IRepositoryManager.Save">
+        <member name="M:Contracts.Repositories.IRepositoryManager.SaveAsync">
             <summary>
             Save the changes in repositories.
             </summary>

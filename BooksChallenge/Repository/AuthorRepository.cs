@@ -20,5 +20,7 @@ namespace Repository
 
 		public async Task<Author> GetAuthorAsync(Guid authorId, bool trackChanges) =>
 			await FindByCondition(c => c.Id.Equals(authorId), trackChanges).Include("Books").SingleOrDefaultAsync();
+
+		public void CreateAuthor(Author author) => Create(author);
 	}
 }

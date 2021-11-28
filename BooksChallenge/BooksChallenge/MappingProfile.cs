@@ -14,9 +14,11 @@ namespace BooksChallenge
 		/// </summary>
 		public MappingProfile()
 		{
-			CreateMap<Author, AuthorDTO>()
-				.ForMember(a => a.Books, opt => opt.MapFrom(src => src.Books)); ;
-			CreateMap<Book, BookDTO>();
+			CreateMap<Author, AuthorDto>()
+				.ForMember(a => a.Books, opt => opt.MapFrom(src => src.Books));
+			CreateMap<AuthorForCreationDto, Author>();
+			CreateMap<Book, BookDto>();
+			CreateMap<BookForCreationDto, Book>();
 		}
 	}
 }

@@ -3,15 +3,10 @@
 namespace Entities.DTO
 {
 	/// <summary>
-	/// Represents a book.
+	/// Represents the books DTO.
 	/// </summary>
-	public class BookDto
+	public class BookForCreationDto
 	{
-		/// <summary>
-		/// Id of the book.
-		/// </summary>
-		public Guid Id { get; set; }
-
 		/// <summary>
 		/// Name of the book.
 		/// </summary>

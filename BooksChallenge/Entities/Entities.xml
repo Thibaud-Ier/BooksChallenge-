@@ -26,52 +26,87 @@
             </summary>
             <param name="builder"></param>
         </member>
-        <member name="T:Entities.DTO.AuthorDTO">
+        <member name="T:Entities.DTO.AuthorDto">
             <summary>
             Represents an author DTO.
             </summary>
         </member>
-        <member name="P:Entities.DTO.AuthorDTO.Id">
+        <member name="P:Entities.DTO.AuthorDto.Id">
             <summary>
             Id of the author.
             </summary>
         </member>
-        <member name="P:Entities.DTO.AuthorDTO.FirstName">
+        <member name="P:Entities.DTO.AuthorDto.FirstName">
             <summary>
             First Name of the author.
             </summary>
         </member>
-        <member name="P:Entities.DTO.AuthorDTO.LastName">
+        <member name="P:Entities.DTO.AuthorDto.LastName">
             <summary>
             Last Name of the author.
             </summary>
         </member>
-        <member name="P:Entities.DTO.AuthorDTO.Books">
+        <member name="P:Entities.DTO.AuthorDto.Books">
             <summary>
             Books of the author.
             </summary>
         </member>
-        <member name="T:Entities.DTO.BookDTO">
+        <member name="T:Entities.DTO.AuthorForCreationDto">
+            <summary>
+            Represents the DTO for the creation of an author.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.AuthorForCreationDto.FirstName">
+            <summary>
+            Represents the first name of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.AuthorForCreationDto.LastName">
+            <summary>
+            Represents the last name of the author.
+            </summary>
+        </member>
+        <member name="T:Entities.DTO.BookDto">
             <summary>
             Represents a book.
             </summary>
         </member>
-        <member name="P:Entities.DTO.BookDTO.Id">
+        <member name="P:Entities.DTO.BookDto.Id">
             <summary>
             Id of the book.
             </summary>
         </member>
-        <member name="P:Entities.DTO.BookDTO.Name">
+        <member name="P:Entities.DTO.BookDto.Name">
             <summary>
             Name of the book.
             </summary>
         </member>
-        <member name="P:Entities.DTO.BookDTO.Isbn">
+        <member name="P:Entities.DTO.BookDto.Isbn">
             <summary>
             Isbn code of the book.
             </summary>
         </member>
-        <member name="P:Entities.DTO.BookDTO.AuthorId">
+        <member name="P:Entities.DTO.BookDto.AuthorId">
+            <summary>
+            Author Id of the book.
+            </summary>
+        </member>
+        <member name="T:Entities.DTO.BookForCreationDto">
+            <summary>
+            Represents the books DTO.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.BookForCreationDto.Name">
+            <summary>
+            Name of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.BookForCreationDto.Isbn">
+            <summary>
+            Isbn code of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.BookForCreationDto.AuthorId">
             <summary>
             Author Id of the book.
             </summary>

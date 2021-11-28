@@ -29,7 +29,7 @@ namespace ApiTests
 			var okResult = result as OkObjectResult;
 			Assert.NotNull(okResult);
 			Assert.Equal(200, okResult.StatusCode);
-			var listAuthors = okResult.Value as IEnumerable<AuthorDTO>;
+			var listAuthors = okResult.Value as IEnumerable<AuthorDto>;
 			Assert.NotNull(listAuthors);
 			Assert.Equal(2, listAuthors.Count());
 			Assert.Equal(new Guid("3f9a0026-e78e-4307-a4df-c28470b7867d"), listAuthors.First().Id);
@@ -50,7 +50,7 @@ namespace ApiTests
 			var okResult = result as OkObjectResult;
 			Assert.NotNull(okResult);
 			Assert.Equal(200, okResult.StatusCode);
-			var author = okResult.Value as AuthorDTO;
+			var author = okResult.Value as AuthorDto;
 
 			Assert.NotNull(author);
 			Assert.Equal(new Guid(id), author.Id);

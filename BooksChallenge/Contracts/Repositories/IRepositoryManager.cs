@@ -1,4 +1,6 @@
-﻿namespace Contracts.Repositories
+﻿using System.Threading.Tasks;
+
+namespace Contracts.Repositories
 {
 	/// <summary>
 	/// Interface for repository manager.
@@ -18,6 +20,6 @@
 		/// <summary>
 		/// Save the changes in repositories.
 		/// </summary>
-		void Save();
+		Task SaveAsync();
 	}
 }

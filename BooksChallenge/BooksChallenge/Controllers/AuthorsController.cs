@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Contracts.Repositories;
 using Entities.DTO;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -37,7 +38,7 @@ namespace BooksChallenge.Controllers
 		public async Task<IActionResult> GetAuthors()
 		{
 			var authors = await _repository.Author.GetAllAuthorsAsync(trackChanges: false);
-			var authorsDTO = _mapper.Map<IEnumerable<AuthorDTO>>(authors);
+			var authorsDTO = _mapper.Map<IEnumerable<AuthorDto>>(authors);
 
 			return Ok(authorsDTO);
 		}
@@ -55,9 +56,30 @@ namespace BooksChallenge.Controllers
 				return NotFound();
 			else
 			{
-				var authorDto = _mapper.Map<AuthorDTO>(author);
+				var authorDto = _mapper.Map<AuthorDto>(author);
 				return Ok(authorDto);
 			}
+		}
+
+		/// <summary>
+		/// Create an author.
+		/// </summary>
+		/// <param name="author"></param>
+		/// <returns></returns>
+		[HttpPost]
+		public async Task<IActionResult> CreateAuthor([FromBody] AuthorForCreationDto author)
+		{
+			if (author == null)
+				return BadRequest("AuthorForCreationDto object is null");
+
+			var authorEntity = _mapper.Map<Author>(author);
+
+			_repository.Author.CreateAuthor(authorEntity);
+			await _repository.SaveAsync();
+
+			var authorToReturn = _mapper.Map<AuthorDto>(authorEntity);
+
+			return CreatedAtRoute("AuthorById", new { id = authorToReturn.Id }, authorToReturn);
 		}
 	}
 }

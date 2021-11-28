@@ -24,5 +24,11 @@ namespace Contracts.Repositories
 		/// <param name="trackChanges"></param>
 		/// <returns></returns>
 		Task<Author> GetAuthorAsync(Guid authorId, bool trackChanges);
+
+		/// <summary>
+		/// Create an author.
+		/// </summary>
+		/// <param name="author"></param>
+		void CreateAuthor(Author author);
 	}
 }

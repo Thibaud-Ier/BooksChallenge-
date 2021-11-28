@@ -6,7 +6,7 @@ namespace Entities.DTO
 	/// <summary>
 	/// Represents an author DTO.
 	/// </summary>
-	public class AuthorDTO
+	public class AuthorDto
 	{
 		/// <summary>
 		/// Id of the author.
@@ -26,6 +26,6 @@ namespace Entities.DTO
 		/// <summary>
 		///	Books of the author.
 		/// </summary>
-		public ICollection<BookDTO> Books { get; set; }
+		public ICollection<BookDto> Books { get; set; }
 	}
 }
