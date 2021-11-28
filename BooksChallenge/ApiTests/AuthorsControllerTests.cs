@@ -23,11 +23,6 @@ namespace ApiTests
 			_controller = new AuthorsController(repositoryManager, fixture.Mapper);
 		}
 
-		~AuthorsControllerTests()
-		{
-			_fixture.Dispose();
-		}
-
 		[Fact]
 		public async Task Get_Authors_Should_Give_Initial_Authors()
 		{

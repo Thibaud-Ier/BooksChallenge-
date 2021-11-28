@@ -23,11 +23,6 @@ namespace ApiTests
 			_controller = new BooksController(repositoryManager, fixture.Mapper);
 		}
 
-		~BooksControllerTests()
-		{
-			_fixture.Dispose();
-		}
-
 		[Fact]
 		public async Task Get_Books_Should_Give_Initial_Books()
 		{
