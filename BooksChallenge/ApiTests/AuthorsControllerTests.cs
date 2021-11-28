@@ -6,6 +6,7 @@ using Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace ApiTests
@@ -29,9 +30,9 @@ namespace ApiTests
 		}
 
 		[Fact]
-		public void Get_Authors_Should_Give_Initial_Authors()
+		public async Task Get_Authors_Should_Give_Initial_Authors()
 		{
-			var result = _controller.GetAuthors();
+			var result = await _controller.GetAuthors();
 
 			var okResult = result as OkObjectResult;
 			Assert.NotNull(okResult);

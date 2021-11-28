@@ -1,8 +1,10 @@
 ﻿using Contracts.Repositories;
 using Entities;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -12,7 +14,7 @@ namespace Repository
 		{
 		}
 
-		public IEnumerable<Author> GetAllAuthors(bool trackChanges) =>
-			FindAll(trackChanges).OrderBy(a => a.LastName).ThenBy(a => a.FirstName).ToList();
+		public async Task<IEnumerable<Author>> GetAllAuthorsAsync(bool trackChanges) =>
+			await FindAll(trackChanges).OrderBy(a => a.LastName).ThenBy(a => a.FirstName).ToListAsync();
 	}
 }

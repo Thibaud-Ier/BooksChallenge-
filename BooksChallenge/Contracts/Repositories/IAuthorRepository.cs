@@ -1,5 +1,6 @@
 ﻿using Entities.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Contracts.Repositories
 {
@@ -13,6 +14,6 @@ namespace Contracts.Repositories
 		/// </summary>
 		/// <param name="trackChanges"></param>
 		/// <returns></returns>
-		IEnumerable<Author> GetAllAuthors(bool trackChanges);
+		Task<IEnumerable<Author>> GetAllAuthorsAsync(bool trackChanges);
 	}
 }

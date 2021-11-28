@@ -3,6 +3,7 @@ using Contracts.Repositories;
 using Entities.DTO;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BooksChallenge.Controllers
 {
@@ -32,9 +33,9 @@ namespace BooksChallenge.Controllers
 		/// </summary>
 		/// <returns></returns>
 		[HttpGet]
-		public IActionResult GetAuthors()
+		public async Task<IActionResult> GetAuthors()
 		{
-			var authors = _repository.Author.GetAllAuthors(trackChanges: false);
+			var authors = await _repository.Author.GetAllAuthorsAsync(trackChanges: false);
 			var authorsDTO = _mapper.Map<IEnumerable<AuthorDTO>>(authors);
 			return Ok(authorsDTO);
 		}

@@ -38,7 +38,7 @@
             Interface for AuthorRepository.
             </summary>
         </member>
-        <member name="M:Contracts.Repositories.IAuthorRepository.GetAllAuthors(System.Boolean)">
+        <member name="M:Contracts.Repositories.IAuthorRepository.GetAllAuthorsAsync(System.Boolean)">
             <summary>
             Get all authors.
             </summary>
