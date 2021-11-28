@@ -81,5 +81,27 @@ namespace BooksChallenge.Controllers
 
 			return CreatedAtRoute("AuthorById", new { id = authorToReturn.Id }, authorToReturn);
 		}
+
+		/// <summary>
+		/// Update an author.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <param name="author"></param>
+		/// <returns></returns>
+		[HttpPut("{id}")]
+		public async Task<IActionResult> UpdateAuthor(Guid id, [FromBody] AuthorForUpdateDto author)
+		{
+			if (author == null)
+				return BadRequest("AuthorForUpdateDto object is null");
+
+			var authorEntity = await _repository.Author.GetAuthorAsync(id, trackChanges: true);
+			if (authorEntity == null)
+				return NotFound();
+
+			_mapper.Map(author, authorEntity);
+			await _repository.SaveAsync();
+
+			return NoContent();
+		}
 	}
 }

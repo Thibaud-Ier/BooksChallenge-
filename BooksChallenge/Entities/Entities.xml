@@ -66,6 +66,21 @@
             Represents the last name of the author.
             </summary>
         </member>
+        <member name="T:Entities.DTO.Authors.AuthorForUpdateDto">
+            <summary>
+            Represents the DTO for the update of an author.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.Authors.AuthorForUpdateDto.FirstName">
+            <summary>
+            Represents the first name of the author.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.Authors.AuthorForUpdateDto.LastName">
+            <summary>
+            Represents the last name of the author.
+            </summary>
+        </member>
         <member name="T:Entities.DTO.Books.BookDto">
             <summary>
             Represents a book.
@@ -93,7 +108,7 @@
         </member>
         <member name="T:Entities.DTO.Books.BookForCreationDto">
             <summary>
-            Represents the books DTO.
+            Represents the DTO for the creation of a book.
             </summary>
         </member>
         <member name="P:Entities.DTO.Books.BookForCreationDto.Name">
@@ -107,6 +122,26 @@
             </summary>
         </member>
         <member name="P:Entities.DTO.Books.BookForCreationDto.AuthorId">
+            <summary>
+            Author Id of the book.
+            </summary>
+        </member>
+        <member name="T:Entities.DTO.Books.BookForUpdateDto">
+            <summary>
+            Represents the DTO for the update of a book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.Books.BookForUpdateDto.Name">
+            <summary>
+            Name of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.Books.BookForUpdateDto.Isbn">
+            <summary>
+            Isbn code of the book.
+            </summary>
+        </member>
+        <member name="P:Entities.DTO.Books.BookForUpdateDto.AuthorId">
             <summary>
             Author Id of the book.
             </summary>

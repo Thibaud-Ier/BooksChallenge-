@@ -18,8 +18,10 @@ namespace BooksChallenge
 			CreateMap<Author, AuthorDto>()
 				.ForMember(a => a.Books, opt => opt.MapFrom(src => src.Books));
 			CreateMap<AuthorForCreationDto, Author>();
+			CreateMap<AuthorForUpdateDto, Author>();
 			CreateMap<Book, BookDto>();
 			CreateMap<BookForCreationDto, Book>();
+			CreateMap<BookForUpdateDto, Book>();
 		}
 	}
 }

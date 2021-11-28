@@ -20,7 +20,7 @@ namespace BooksChallenge.Controllers
 		private readonly IMapper _mapper;
 
 		/// <summary>
-		/// Constructor of AuthorsController.
+		/// Constructor of BooksController.
 		/// </summary>
 		/// <param name="repository"></param>
 		/// <param name="mapper"></param>
@@ -31,7 +31,7 @@ namespace BooksChallenge.Controllers
 		}
 
 		/// <summary>
-		/// Get the list of authors.
+		/// Get the list of books.
 		/// </summary>
 		/// <returns></returns>
 		[HttpGet]
@@ -80,6 +80,28 @@ namespace BooksChallenge.Controllers
 			var bookToReturn = _mapper.Map<BookDto>(bookEntity);
 
 			return CreatedAtRoute("BookById", new { id = bookToReturn.Id }, bookToReturn);
+		}
+
+		/// <summary>
+		/// Update a book.
+		/// </summary>
+		/// <param name="id"></param>
+		/// <param name="book"></param>
+		/// <returns></returns>
+		[HttpPut("{id}")]
+		public async Task<IActionResult> UpdateBook(Guid id, [FromBody] BookForUpdateDto book)
+		{
+			if (book == null)
+				return BadRequest("BookForUpdateDto object is null");
+
+			var bookEntity = await _repository.Book.GetBookAsync(id, trackChanges: true);
+			if (bookEntity == null)
+				return NotFound();
+
+			_mapper.Map(book, bookEntity);
+			await _repository.SaveAsync();
+
+			return NoContent();
 		}
 	}
 }

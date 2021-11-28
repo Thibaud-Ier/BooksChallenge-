@@ -3,9 +3,9 @@
 namespace Entities.DTO.Books
 {
 	/// <summary>
-	/// Represents the DTO for the creation of a book.
+	/// Represents the DTO for the update of a book.
 	/// </summary>
-	public class BookForCreationDto
+	public class BookForUpdateDto
 	{
 		/// <summary>
 		/// Name of the book.
