@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginFormComponent, ResetPasswordFormComponent, CreateAccountFormComponent, ChangePasswordFormComponent } from './shared/components';
 import { AuthGuardService } from './shared/services';
-import { HomeComponent } from './pages/home/home.component';
 import { AuthorsComponent } from './pages/authors/authors.component';
 import { BooksComponent } from './pages/books/books.component';
 import { ProfileComponent } from './pages/profile/profile.component';
@@ -12,11 +11,6 @@ const routes: Routes = [
   {
     path: 'profile',
     component: ProfileComponent,
-    canActivate: [ AuthGuardService ]
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
     canActivate: [ AuthGuardService ]
   },
   {
@@ -59,6 +53,6 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: true }), DxDataGridModule, DxFormModule],
   providers: [AuthGuardService],
   exports: [RouterModule],
-  declarations: [HomeComponent, ProfileComponent]
+  declarations: [AuthorsComponent, BooksComponent, ProfileComponent]
 })
 export class AppRoutingModule { }
