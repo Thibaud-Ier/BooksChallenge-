@@ -7,10 +7,14 @@ import { FooterModule, ResetPasswordFormModule, CreateAccountFormModule, ChangeP
 import { AuthService, ScreenService, AppInfoService } from './shared/services';
 import { UnauthenticatedContentModule } from './unauthenticated-content';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthorsComponent } from './pages/authors/authors.component';
+import { BooksComponent } from './pages/books/books.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthorsComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,
