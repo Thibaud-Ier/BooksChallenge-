@@ -38,6 +38,7 @@ namespace BooksChallenge
 		/// <param name="services"></param>
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.ConfigureCors();
 			services.ConfigureLoggerService();
 			services.ConfigureSqlContext(Configuration);
 			services.ConfigureRepositoryManager();
@@ -67,6 +68,8 @@ namespace BooksChallenge
 
 			app.ConfigureExceptionHandler(logger);
 			app.UseHttpsRedirection();
+
+			app.UseCors("CorsPolicy");
 
 			app.UseRouting();
 

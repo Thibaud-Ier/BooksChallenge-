@@ -21,5 +21,14 @@ namespace BooksChallenge.Extensions
 
 		public static void ConfigureRepositoryManager(this IServiceCollection services) =>
 			services.AddScoped<IRepositoryManager, RepositoryManager>();
+
+		public static void ConfigureCors(this IServiceCollection services) =>
+			services.AddCors(options =>
+			{
+				options.AddPolicy("CorsPolicy", builder =>
+				builder.AllowAnyOrigin()
+				.AllowAnyMethod()
+				.AllowAnyHeader());
+			});
 	}
 }
