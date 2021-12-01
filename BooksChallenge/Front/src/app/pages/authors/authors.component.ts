@@ -26,9 +26,10 @@ export class AuthorsComponent implements OnInit {
   updateAuthor(event: any)
   {
     this.service.updateAuthor(event.key, event.data);
-  //     component: inheritor {callBase: undefined, _customClass: undefined, _$element: initRender(1), NAME: 'dxDataGrid', _eventsStrategy: NgEventsStrategy, …}
-// data: {id: '3f9a0026-e78e-4307-a4df-c28470b7867d', firstName: 'Jack', lastName: 'Londonsssss', books: Array(0)}
-// element: dx-data-grid.dx-widget.dx-visibility-change-handler
-// key: "3f9a0026-e78e-4307-a4df-c28470b7867d"
+  }
+
+  createAuthor(event: any)
+  {
+    this.service.createAuthor(event.data);
   }
 }

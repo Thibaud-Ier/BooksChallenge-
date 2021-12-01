@@ -40,6 +40,7 @@
 </div> -->
 
     <dx-data-grid [allowColumnReordering]="true" [dataSource]="authors" keyExpr="id"
+        (onRowInserted)="createAuthor($event)"
         (onRowUpdated)="updateAuthor($event)">
         <dxi-column dataField="firstName"></dxi-column>
         <dxi-column dataField="lastName"></dxi-column>
