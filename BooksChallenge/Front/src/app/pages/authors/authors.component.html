@@ -1,5 +1,6 @@
 <h2 class="content-block">Authors</h2>
 <div class="content-block">
+
     <!-- <div class="dx-card responsive-paddings">
   <div class="logos-container">
     <svg class="devextreme-logo" viewBox="0 0 200 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,9 +39,16 @@
   </p>
 </div> -->
 
-    <dx-data-grid [allowColumnReordering]="true" [dataSource]="authors" keyExpr="id">
+    <dx-data-grid [allowColumnReordering]="true" [dataSource]="authors" keyExpr="id"
+        (onRowUpdated)="updateAuthor($event)">
         <dxi-column dataField="firstName"></dxi-column>
         <dxi-column dataField="lastName"></dxi-column>
+
+        <dxo-editing
+            mode="cell"
+            [allowUpdating]="true"
+            [allowAdding]="true">
+        </dxo-editing>
     </dx-data-grid>
 
 

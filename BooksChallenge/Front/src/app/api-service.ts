@@ -23,12 +23,28 @@ export class ApiService {
         this.httpClient.get<any[]>('https://localhost:44342/api/Authors')
         .subscribe(
           (response: any) => {
-            console.log(response);
             this.authors = response;
             this.emitAppareilSubject();
           },
           (error: any) => {
-            console.log('Erreur ! : ' + error);
+            console.log('Erreur get authors ! : ');
+            console.log(error);
+          }
+        );
+    }
+
+    updateAuthor(id : string, data: any)
+    {
+        var body: any = {};
+
+        body.firstName = data.firstName;
+        body.lastName = data.lastName;
+        this.httpClient.put<any[]>("https://localhost:44342/api/Authors/" + id, body)
+        .subscribe(
+          (response: any) => {
+          },
+          (error: any) => {
+            console.log('Erreur put authors ! : ');
             console.log(error);
           }
         );
