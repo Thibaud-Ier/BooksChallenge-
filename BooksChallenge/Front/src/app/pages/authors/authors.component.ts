@@ -17,7 +17,7 @@ export class AuthorsComponent implements OnInit {
         this.authors = authors;
       }
     );
-    this.service.emitAppareilSubject();
+    this.service.emitAuthorSubject();
    }
 
   ngOnInit(): void {

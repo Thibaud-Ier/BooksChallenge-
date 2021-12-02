@@ -1,1 +1,39 @@
-<p>books works!</p>
+<h2 class="content-block">Books</h2>
+<div class="content-block">
+
+    <dx-data-grid [allowColumnReordering]="true" [dataSource]="books" keyExpr="id" (onRowInserted)="createBook($event)"
+        (onRowUpdated)="updateBook($event)">
+        <dxi-column dataField="name"></dxi-column>
+        <dxi-column dataField="isbn"></dxi-column>
+
+        <!-- <dxi-column dataField="authorId" alignment="center" caption="Author">
+        <dx-select-box [dataSource]="authors" valueExpr="authorId" displayExpr="fullName"></dx-select-box>
+    </dxi-column> -->
+
+
+        <!-- editCellTemplate="updateBook($event)" -->
+        <!-- [setCellValue]="setAuthorValue" -->
+        <dxi-column dataField="authorId" caption="Author">
+            <dxo-lookup [dataSource]="authors" valueExpr="id" displayExpr="fullName">
+            </dxo-lookup>
+        </dxi-column>
+        <!-- <div *dxTemplate="let author of 'authorCellTemplate'">
+            <select class="custom-select" (change)="onAuthorValueChanged($event)" formControlName="authorName">
+                <option value="" disabled>Choose your author</option>
+                <option *ngFor="let item of authors" [ngValue]="item.authorId">{{item.fullName}}</option>
+             </select> 
+
+            <dx-select-box [value]="author.data.authorId" [dataSource]="authors" 
+                (onValueChanged)="onAuthorValueChanged($event, author)"
+                valueExpr="id" displayExpr="fullName" [searchEnabled]="true"
+                placeholder="Select an author" [acceptCustomValue]="false" searchExpr="fullName" [showClearButton]="true"
+                [searchTimeout]="0" >
+            </dx-select-box>
+
+        </div> -->
+
+        <dxo-editing mode="cell" [allowUpdating]="true" [allowAdding]="true"></dxo-editing>
+
+    </dx-data-grid>
+
+</div>

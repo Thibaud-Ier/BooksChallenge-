@@ -16,7 +16,7 @@ namespace Repository
 		}
 
 		public async Task<IEnumerable<Author>> GetAllAuthorsAsync(bool trackChanges) =>
-			await FindAll(trackChanges).OrderBy(a => a.LastName).ThenBy(a => a.FirstName).ToListAsync();
+			await FindAll(trackChanges).Include("Books").OrderBy(a => a.LastName).ThenBy(a => a.FirstName).ToListAsync();
 
 		public async Task<Author> GetAuthorAsync(Guid authorId, bool trackChanges) =>
 			await FindByCondition(c => c.Id.Equals(authorId), trackChanges).Include("Books").SingleOrDefaultAsync();
